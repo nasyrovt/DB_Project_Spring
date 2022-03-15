@@ -1,7 +1,7 @@
 # DB_Project_Spring
 
 
-Application de gestion de vélo en libre services
+Mise en place d'une Application de gestion de vélo en libre service
 
 
 ## Documentation
