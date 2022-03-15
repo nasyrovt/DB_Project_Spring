@@ -1,11 +1,26 @@
 # DB_Project_Spring
 
-Mise en œuvre d'une application
-de gestion de Vélos en Libre-Service
 
-#Documentation
-La documentation du projet se trouve ici
-  GLossaire
-  Diagrame Conceptuel
-  Mapping JPA
-  Shemas relationnelle
+Application de gestion de vélo en libre services
+
+
+## Documentation
+
+La documentation du projet se trouve [ici](https://linktodocumentatioSpringBootProject/src)
+
+
+- [GLossaire](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Diagramme Conceptuel](https://github.com/matiassingers/awesome-readme)
+ - [Mapping JPA](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ -  [Schemas relationnelles](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ -  [Nos Hypotheses](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ 
+
+ 
+
+
+
+
+
+
+
