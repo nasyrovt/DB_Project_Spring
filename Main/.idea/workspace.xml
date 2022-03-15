@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RunManager" selected="JUnit.VeloRepositoryTest">
+    <configuration name="VeloRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accessing-data-jpa-initial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.VeloRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccessingDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="accessing-data-jpa-initial" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.accessingdatajpa.AccessingDataJpaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.VeloRepositoryTest" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>
