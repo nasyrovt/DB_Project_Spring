@@ -1,8 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="RunManager" selected="JUnit.VeloRepositoryTest">
-    <configuration name="VeloRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accessing-data-jpa-initial" />
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77d49d35-db16-4404-97e4-dc2a77375718" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/BornetteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/StationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/StationRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Velo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Velo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="26RadeA8Ibsp7e4SxxMDOuLKURl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.accessingdatajpa.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BornetteRepositoryTest.saveBornette">
+    <configuration name="BornetteRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.BornetteRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BornetteRepositoryTest.saveBornette" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.BornetteRepositoryTest" />
+      <option name="METHOD_NAME" value="saveBornette" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StationRepositoryTest.testSaveStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.StationRepositoryTest" />
+      <option name="METHOD_NAME" value="testSaveStation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VeloRepositoryTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
@@ -16,6 +133,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VeloRepositoryTest.saveVelo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.VeloRepositoryTest" />
+      <option name="METHOD_NAME" value="saveVelo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccessingDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="accessing-data-jpa-initial" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.accessingdatajpa.AccessingDataJpaApplication" />
@@ -25,8 +158,40 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VeloRepositoryTest" />
+        <item itemvalue="JUnit.BornetteRepositoryTest.saveBornette" />
+        <item itemvalue="JUnit.VeloRepositoryTest.saveVelo" />
+        <item itemvalue="JUnit.BornetteRepositoryTest" />
+        <item itemvalue="JUnit.StationRepositoryTest.testSaveStation" />
+        <item itemvalue="JUnit.VeloRepositoryTest (1)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77d49d35-db16-4404-97e4-dc2a77375718" name="Changes" comment="" />
+      <created>1647388940739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647388940739</updated>
+      <workItem from="1647388942661" duration="134000" />
+      <workItem from="1647389089665" duration="173000" />
+      <workItem from="1647426161596" duration="5434000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

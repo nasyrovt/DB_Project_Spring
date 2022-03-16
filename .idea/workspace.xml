@@ -26,6 +26,7 @@
     </option>
   </component>
   <component name="ProjectId" id="26OYh9JgKPrjB9hf45PIlWvo7c8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,17 +38,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/SpringBootProject" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AccessingDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="accessing-data-jpa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.accessingdatajpa.AccessingDataJpaApplication" />
@@ -65,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647296216642</updated>
       <workItem from="1647296218139" duration="1262000" />
+      <workItem from="1647388915046" duration="26000" />
     </task>
     <servers />
   </component>

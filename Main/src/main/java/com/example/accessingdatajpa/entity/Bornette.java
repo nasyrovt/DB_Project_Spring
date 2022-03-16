@@ -25,14 +25,23 @@ public class Bornette {
     )
     private Long bornetteId;
 
-    @Column(name = "etat_dela_bornette")
+    @Column(name = "etat_bornette")
     private AllEnums.Etat etatB;
 
     //References Station, because it can not exist without it
-    @ManyToOne
+    @ManyToOne(
+            cascade = CascadeType.ALL
+    )
     @JoinColumn(
             name="station_id",
             referencedColumnName = "stationId"
     )
     private Station station;
+
+    @OneToOne(
+            mappedBy = "bornette",
+            fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL
+    )
+    private Velo velo;
 }

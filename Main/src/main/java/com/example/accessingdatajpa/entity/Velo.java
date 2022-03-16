@@ -4,6 +4,7 @@ import com.example.accessingdatajpa.AllEnums;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ import java.time.LocalDateTime;
                 columnNames = "numero_de_puce"
         )
 )
+@ToString
 public class Velo {
 
     @Id
@@ -46,6 +48,26 @@ public class Velo {
 
     @Column(name="numero_de_puce", nullable = false)
     private int puceId;
+
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    @JoinColumn(
+            name="bornette_id",
+            referencedColumnName = "bornetteId"
+    )
+    @ToString.Exclude
+    private Bornette bornette;
+
+
+    public void setBornette(Bornette bornette) {
+        this.bornette = bornette;
+    }
+
+    public Bornette getBornette() {
+        return bornette;
+    }
 
     public Long getId() {
         return this.veloId;

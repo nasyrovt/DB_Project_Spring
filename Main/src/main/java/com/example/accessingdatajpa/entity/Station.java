@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -26,9 +27,14 @@ public class Station {
     )
     private Long stationId;
 
-    private String rue;
-    private String ville;
-    private int cp;
+    private String adresse;
     private AllEnums.Classification classification;
-    private AllEnums.TempJournee jounree;
+
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(
+//            name="station_id",
+//            referencedColumnName = "stationId"
+//    )
+//    private List<Bornette> bornette;
+//    private AllEnums.TempJournee status;
 }

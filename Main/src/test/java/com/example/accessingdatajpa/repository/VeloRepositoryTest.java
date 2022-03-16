@@ -1,7 +1,9 @@
 package com.example.accessingdatajpa.repository;
 
 import com.example.accessingdatajpa.AllEnums;
+import com.example.accessingdatajpa.entity.Bornette;
 import com.example.accessingdatajpa.entity.Modele;
+import com.example.accessingdatajpa.entity.Station;
 import com.example.accessingdatajpa.entity.Velo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +18,13 @@ class VeloRepositoryTest {
     @Autowired
     private VeloRepository veloRepository;
 
+
     @Test
     public void saveVelo(){
-        Velo velo = Velo.builder()
-//                .modeleDeVelo()
-                .puceId(1)
-                .etatV(AllEnums.Etat.ETAT_OK)
-                .miseEnService(LocalDateTime.now())
+
+        Bornette bornette = Bornette.builder()
+                .etatB(AllEnums.Etat.ETAT_OK)
                 .build();
-
-        veloRepository.save(velo);
-    }
-
-    @Test
-    public void saveVeloWithModele(){
 
         Modele vttModele = Modele.builder()
                 .modeleName("VTT")
@@ -39,6 +34,7 @@ class VeloRepositoryTest {
         Velo veloVTT_2 = Velo.builder()
                 .modeleDeVelo(vttModele)
                 .puceId(2)
+                .bornette(bornette)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();
