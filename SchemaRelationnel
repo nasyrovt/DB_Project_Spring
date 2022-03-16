@@ -1,0 +1,41 @@
+Station(id, adresse, bornettes)
+{(id, adr, b)∈ Station <=> Une station dont l'identifiant est id est située à l'adresse adr, et possède la bornette b. Une station peut posséder plusieurs bornettes . L'identifiant de la station est l'identifiant de la relation (clef de la relation). }
+
+
+Bornettes(numero, idStation,etatB, numeroVelo)
+{(n, e)∈ Bornettes <=>  Une bornette dont le numero est n et se trouve  à l'état e. Le numero de la bornette et l'id de la station constituent est un identifiant (clef de la relation).}
+
+Velo(numero, modeleName, etatV, dateMS)
+{(id, m, e, d)∈ Velo <=>  Un velo  dont le numero est n ,  de modele m en  etat e et mise en service à la date d. Le numero  est un identifiant (clef de la relation).}
+
+Clients(codeSecret, numCB)
+{( c, n)£  Clients<=>  Un client peut s'identifier  par son code secret c et possède une carte de numero n. Le codeSecret  est un identifiant (clef de la relation).}
+
+Abonnes(codeSecret, nom, prenom, sexe, adresse, dateDebutAbo, dateFinAbo, prime,reduction)
+{( c, n, p, s, adr, dd, da, fa, pr, r)£  Client<=>  Un client abonné peut s'identifier  par son code secret c ,de  civilité s, possède le nom n, le prenom p, a prix un abonnement à la date da, qui prendra fin à la date fa, avec une prime pr, et une reduction r. Le codeSecret  est un identifiant (clef de la relation).}
+
+
+Location(idClient, idStationD, idStationA,  heureDepart, heureArrive, prix)
+{(idC idD,idA hd, ha )∈  Location<=>  La location d'un velo se fait  à une station de depart, idd, après que le client soit identifier par son idC à une heure hd, et a été rendu à la station d'arrivée da à une heure ha dont le prix du trajet est p. L' idClient  est un identifiant (clef de la relation)}.
+
+
+Modeles(name, prix-horaire)
+{(n, p)£ Modeles <=>  Le modele  du vélo est n, dont le prix  horaire est p. Le nom  est un identifiant (clef de la relation).}
+
+
+
+
+Domaine(adr) = domaine(etatB)=domaine(etatV)=Domaine(nom)=Domaine(prenom) = chaine de caractère
+Domaine(sexe,classification, etat) = check
+
+Domaine(numero) = Domaine(id) =Domaine(CB)=Domaine((idStationD)=Domaine((idStationA)= Domaine(codeSecret)= entiers
+
+Domaine(date) = Date
+
+Domaine( heureDepart)=Domaine( heureDepart)=Domaine( dateDebutAbo) = Domaine( dateFinAbo)=DateTime
+Domaine(prix) = reel
+
+(modeleName) ⊂Modele(name)
+Bornette(idStation) ⊂  Station (id)
+Bornettes(numeroVelo) ⊂ Velo(numero)
+Location(idClient) ⊂ Client(codeSecret) 
