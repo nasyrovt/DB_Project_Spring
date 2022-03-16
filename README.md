@@ -6,7 +6,7 @@ Mise en place d'une Application de gestion de vélo en libre service
 
 ## Documentation
 
-La documentation du projet se trouve [ici](https://linktodocumentatioSpringBootProject/src)
+La documentation du projet se trouve [ici](https://github.com/nasyrovt/DB_Project_Spring/tree/master/SpringBootProject/src/main/java/com/example/accessingdatajpa)
 
 
 - [GLossaire](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
