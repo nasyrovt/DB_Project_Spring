@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77d49d35-db16-4404-97e4-dc2a77375718" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/BornetteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/StationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/StationRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="77d49d35-db16-4404-97e4-dc2a77375718" name="Changes" comment="One to one for bornette-velo&#10;Many to One for bornettes-station">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/Abonne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/LocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/LocationRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootProject/src/main/java/com/example/example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Velo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Velo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette$BornetteBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette$BornetteBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Station$StationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Station$StationBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Station.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Velo$VeloBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Velo$VeloBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Velo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Velo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/VeloRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/VeloRepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,7 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,7 +51,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -57,10 +63,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.com.haulmont.jpb.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -176,8 +184,18 @@
       <updated>1647388940739</updated>
       <workItem from="1647388942661" duration="134000" />
       <workItem from="1647389089665" duration="173000" />
-      <workItem from="1647426161596" duration="5434000" />
+      <workItem from="1647426161596" duration="5551000" />
+      <workItem from="1647434332879" duration="6252000" />
+      <workItem from="1647737802142" duration="476000" />
     </task>
+    <task id="LOCAL-00001" summary="One to one for bornette-velo&#10;Many to One for bornettes-station">
+      <created>1647432087122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647432087122</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,5 +211,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="One to one for bornette-velo&#10;Many to One for bornettes-station" />
+    <option name="LAST_COMMIT_MESSAGE" value="One to one for bornette-velo&#10;Many to One for bornettes-station" />
   </component>
 </project>
