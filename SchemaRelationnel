@@ -11,8 +11,8 @@ Velo(numero, modeleName, etatV, dateMS)
 Clients(idClient, codeSecret, numCB)
 {( id, cs, n)£  Clients<=>  Un client peut s'identifier  par son id et un code secret cs lui ai attribué et possède une carte de numero n. L'idClient  est un identifiant (clef de la relation).}
 
-Abonnes(codeSecret, nom, prenom, sexe, adresse, dateDebutAbo, dateFinAbo, prime,reduction)
-{( c, n, p, s, adr, dd, da, fa, pr, r)£  Client<=>  Un client abonné peut s'identifier  par son code secret c ,de  civilité s, possède le nom n, le prenom p, a prix un abonnement à la date da, qui prendra fin à la date fa, avec une prime pr, et une reduction r. Le codeSecret  est un identifiant (clef de la relation).}
+Abonnes(id,codeSecret, nom, prenom, sexe, adresse, dateDebutAbo, dateFinAbo, prime,reduction)
+{(id, cs, n, p, s, adr, dd, da, fa, pr, r)£  Client<=>  Un abonné peut s'identifier par son id et un code secret cs et lui ai attribué,de civilité s, possède le nom n, le prenom p, a prix un abonnement à la date da, qui prendra fin à la date fa, avec une prime pr, et une reduction r. Le codeSecret  est un identifiant (clef de la relation).}
 
 
 Location(idClient, idStationD, idStationA,  heureDepart, heureArrive, prix)
