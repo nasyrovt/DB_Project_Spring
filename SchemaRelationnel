@@ -15,7 +15,7 @@ Abonnes(id,codeSecret, nom, prenom, sexe, adresse, dateDebutAbo, dateFinAbo, pri
 {(id, cs, n, p, s, adr, dd, da, fa, pr, r)£  Client<=>  Un abonné peut s'identifier par son id et un code secret cs et lui ai attribué,de civilité s, possède le nom n, le prenom p, a prix un abonnement à la date da, qui prendra fin à la date fa, avec une prime pr, et une reduction r. Le codeSecret  est un identifiant (clef de la relation).}
 
 
-Location(idClient, idStationD, idStationA,  heureDepart, heureArrive, prix)
+Location(id, idStationD, idStationA,  heureDepart, heureArrive, prix)
 {(idC idD,idA hd, ha )∈  Location<=>  La location d'un velo se fait  à une station de depart, idd, après que le client soit identifier par son idC à une heure hd, et a été rendu à la station d'arrivée da à une heure ha dont le prix du trajet est p. L' idClient  est un identifiant (clef de la relation)}.
 
 
@@ -25,17 +25,17 @@ Modeles(name, prix-horaire)
 
 
 
-Domaine(adr) = domaine(etatB)=domaine(etatV)=Domaine(nom)=Domaine(prenom) = chaine de caractère
+Domaine(adr) = domaine(etatB)=domaine(etatV)=Domaine(nom)=Domaine(prenom) = Domaine(codeSecret)= chaine de caractère
 Domaine(sexe,classification, etat) = check
 
-Domaine(numero) = Domaine(id) =Domaine(CB)=Domaine((idStationD)=Domaine((idStationA)= Domaine(codeSecret)= entiers
+Domaine(numero) = Domaine(id) =Domaine(CB)=Domaine((idStationD)=Domaine((idStationA)= Domaine(id)= entiers
 
 Domaine(date) = Date
 
 Domaine( heureDepart)=Domaine( heureDepart)=Domaine( dateDebutAbo) = Domaine( dateFinAbo)=DateTime
 Domaine(prix) = reel
 
-(modeleName) ⊂Modele(name)
+(modeleName) ⊂ Modele(name)
 Bornette(idStation) ⊂  Station (id)
 Bornettes(numeroVelo) ⊂ Velo(numero)
 Location(idClient) ⊂ Client(codeSecret) 
