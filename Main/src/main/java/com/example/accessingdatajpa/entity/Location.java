@@ -47,7 +47,7 @@ public class Location {
             fetch = FetchType.LAZY
     )
     @JoinColumn(
-            name = "station_id",
+            name = "station_idB",
             referencedColumnName = "stationId"
     )
     private Station stationArriveId;

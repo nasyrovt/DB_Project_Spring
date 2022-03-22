@@ -33,15 +33,15 @@ public class Bornette {
             cascade = CascadeType.ALL
     )
     @JoinColumn(
-            name="station_id",
+            name="stationB",
             referencedColumnName = "stationId"
     )
     private Station station;
 
-    @OneToOne(
-            mappedBy = "bornette",
-            fetch = FetchType.EAGER,
-            cascade = CascadeType.ALL
-    )
-    private Velo velo;
+//    @OneToOne(
+//            mappedBy = "bornette",
+//            fetch = FetchType.EAGER,
+//            cascade = CascadeType.ALL
+//    )
+//    private Velo velo;
 }

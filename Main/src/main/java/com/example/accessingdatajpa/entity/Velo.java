@@ -49,25 +49,27 @@ public class Velo {
     @Column(name="numero_de_puce", nullable = false)
     private int puceId;
 
-    @OneToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-    )
-    @JoinColumn(
-            name="bornette_id",
-            referencedColumnName = "bornetteId"
-    )
-    @ToString.Exclude
-    private Bornette bornette;
-
-
-    public void setBornette(Bornette bornette) {
-        this.bornette = bornette;
-    }
-
-    public Bornette getBornette() {
-        return bornette;
-    }
+//    @OneToOne(
+//            cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY
+//    )
+//    @JoinColumn(
+//            name="bornette_id",
+//            referencedColumnName = "bornetteId",
+//            insertable=false,
+//            updatable=false
+//    )
+//    @ToString.Exclude
+//    private Bornette bornette;
+//
+//
+//    public void setBornette(Bornette bornette) {
+//        this.bornette = bornette;
+//    }
+//
+//    public Bornette getBornette() {
+//        return bornette;
+//    }
 
     public Long getId() {
         return this.veloId;

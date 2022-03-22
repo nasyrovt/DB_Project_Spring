@@ -33,7 +33,7 @@ class StationRepositoryTest {
 
         Bornette bornette = Bornette.builder()
                 .etatB(AllEnums.Etat.ETAT_HS)
-                .velo(velo)
+//                .velo(velo)
                 .build();
 
 //        List<Bornette> bornettes = bornetteRepository.findAll();

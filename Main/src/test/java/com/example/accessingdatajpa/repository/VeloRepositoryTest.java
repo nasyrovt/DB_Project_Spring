@@ -34,7 +34,7 @@ class VeloRepositoryTest {
         Velo veloVTT_2 = Velo.builder()
                 .modeleDeVelo(vttModele)
                 .puceId(2)
-                .bornette(bornette)
+//                .bornette(bornette)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();
