@@ -5,6 +5,7 @@ import com.example.accessingdatajpa.entity.Bornette;
 import com.example.accessingdatajpa.entity.Modele;
 import com.example.accessingdatajpa.entity.Station;
 import com.example.accessingdatajpa.entity.Velo;
+import com.example.accessingdatajpa.repository.api.BornetteRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

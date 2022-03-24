@@ -14,6 +14,9 @@ import java.util.List;
 @Builder
 @ToString
 @Table(name="TBL_STATION")
+@NamedQueries(
+        @NamedQuery(name = "get-all-stations", query = "select s from Station s")
+)
 public class Station {
 
     @Id

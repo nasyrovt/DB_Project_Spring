@@ -15,6 +15,9 @@ import java.time.LocalDateTime;
 @Builder
 @ToString
 @Table(name="TBL_LOCATION")
+@NamedQueries(
+        @NamedQuery(name = "get-all-locations", query = "select l from Location l")
+)
 public class Location {
 
 

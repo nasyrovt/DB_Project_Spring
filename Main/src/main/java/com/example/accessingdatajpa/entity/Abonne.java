@@ -12,6 +12,9 @@ import java.time.LocalDateTime;
 @Builder
 @ToString
 @Table(name="TBL_ABONNE")
+@NamedQueries(
+        @NamedQuery(name = "get-all-abonne", query = "select a from Abonne a")
+)
 public class Abonne{
 
     @Id

@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa.repository;
+package com.example.accessingdatajpa.repository.api;
 
 import com.example.accessingdatajpa.AllEnums;
 import com.example.accessingdatajpa.entity.Velo;
@@ -9,9 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface VeloRepository  extends JpaRepository<Velo, Long> {
+
+    List<Velo> findByModeleDeVelo_ModeleNameIs(String modeleName);
 
 
     // Fetching Data

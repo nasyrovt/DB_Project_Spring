@@ -15,6 +15,9 @@ import javax.persistence.*;
 @Builder
 @Table(name="TBL_BORNETTE")
 @ToString
+@NamedQueries(
+        @NamedQuery(name = "get-all-bornettes", query = "select b from Bornette b")
+)
 public class Bornette {
 
     @Id

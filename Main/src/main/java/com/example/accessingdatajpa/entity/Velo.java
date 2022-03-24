@@ -23,6 +23,9 @@ import java.time.LocalDateTime;
         )
 )
 @ToString
+@NamedQueries(
+        @NamedQuery(name = "get-all-velos", query = "select v from Velo v")
+)
 public class Velo {
 
     @Id

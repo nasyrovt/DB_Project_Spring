@@ -13,10 +13,13 @@ import javax.persistence.*;
 @Builder
 @ToString
 @Table(name="TBL_CLIENT")
+@NamedQueries(
+        @NamedQuery(name = "get-all-clients", query = "select c from Client c")
+)
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long clientId;
 
     @Column(name = "numero_CB")

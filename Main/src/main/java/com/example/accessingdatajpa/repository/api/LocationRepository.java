@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa.repository;
+package com.example.accessingdatajpa.repository.api;
 
 import com.example.accessingdatajpa.entity.Location;
 import org.springframework.data.jpa.repository.JpaRepository;

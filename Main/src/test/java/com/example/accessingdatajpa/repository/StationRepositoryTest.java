@@ -4,6 +4,9 @@ import com.example.accessingdatajpa.AllEnums;
 import com.example.accessingdatajpa.entity.Bornette;
 import com.example.accessingdatajpa.entity.Station;
 import com.example.accessingdatajpa.entity.Velo;
+import com.example.accessingdatajpa.repository.api.BornetteRepository;
+import com.example.accessingdatajpa.repository.api.StationRepository;
+import com.example.accessingdatajpa.repository.api.VeloRepository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -11,11 +14,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

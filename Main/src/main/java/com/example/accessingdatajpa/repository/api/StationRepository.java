@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa.repository;
+package com.example.accessingdatajpa.repository.api;
 
 import com.example.accessingdatajpa.AllEnums;
 import com.example.accessingdatajpa.entity.Bornette;

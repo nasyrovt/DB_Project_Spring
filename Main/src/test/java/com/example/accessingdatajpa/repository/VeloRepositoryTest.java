@@ -1,10 +1,9 @@
 package com.example.accessingdatajpa.repository;
 
 import com.example.accessingdatajpa.AllEnums;
-import com.example.accessingdatajpa.entity.Bornette;
 import com.example.accessingdatajpa.entity.Modele;
-import com.example.accessingdatajpa.entity.Station;
 import com.example.accessingdatajpa.entity.Velo;
+import com.example.accessingdatajpa.repository.api.VeloRepository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -82,6 +81,17 @@ class VeloRepositoryTest {
 
         System.out.println("Velos ids of working velos: ");
         for (Velo velo: velosOK) {
+            System.out.println(velo.getVeloId());
+        }
+    }
+
+    @Test
+    @Order(5)
+    public void printVeloByModelName(){
+        List<Velo> velosVTT = veloRepository.findByModeleDeVelo_ModeleNameIs("VTT");
+
+        System.out.println("VTT-Velos ids: ");
+        for (Velo velo: velosVTT) {
             System.out.println(velo.getVeloId());
         }
     }
