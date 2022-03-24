@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="TBL_BORNETTE")
+@Table(name="tbl_bornette")
 @ToString
 @NamedQueries(
         @NamedQuery(name = "get-all-bornettes", query = "select b from Bornette b")

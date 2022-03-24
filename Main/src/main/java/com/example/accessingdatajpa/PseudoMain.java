@@ -91,7 +91,7 @@ public class PseudoMain {
         System.out.println("Input your bank card credentials (16 digits card number): ");
         int clientCB = Integer.parseInt(scanner.nextLine());
         String clientSecretCode = gerenateCode();
-        System.out.println("Your secret code is " + clientSecretCode + ". Remember it!");
+        System.out.println("Your secret code is " + clientSecretCode);
         Client newClient = Client.builder()
                 .clientId(1L)
                 .numeroCarteBancaire(clientCB)

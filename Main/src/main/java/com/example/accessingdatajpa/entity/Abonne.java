@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @ToString
-@Table(name="TBL_ABONNE")
+@Table(name="tbl_abonne")
 @NamedQueries(
         @NamedQuery(name = "get-all-abonne", query = "select a from Abonne a")
 )
