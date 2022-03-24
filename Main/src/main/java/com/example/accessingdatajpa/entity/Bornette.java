@@ -4,6 +4,8 @@ import com.example.accessingdatajpa.AllEnums;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.*;
 
 
@@ -11,37 +13,44 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(name="TBL_BORNETTE")
+@ToString
 public class Bornette {
 
     @Id
-    @SequenceGenerator(
-            name="BORNETTE_SEQ",
-            sequenceName = "BORNETTE_SEQ",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator="BORNETTE_SEQ"
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bornetteId;
 
     @Column(name = "etat_bornette")
     private AllEnums.Etat etatB;
 
     //References Station, because it can not exist without it
-    @ManyToOne(
-            cascade = CascadeType.ALL
-    )
-    @JoinColumn(
-            name="stationB",
-            referencedColumnName = "stationId"
-    )
-    private Station station;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "station_mere")
+    private Station stationMere;
 
-//    @OneToOne(
-//            mappedBy = "bornette",
-//            fetch = FetchType.EAGER,
-//            cascade = CascadeType.ALL
-//    )
-//    private Velo velo;
+
+    public Long getBornetteId() {
+        return bornetteId;
+    }
+
+    public void setBornetteId(Long bornetteId) {
+        this.bornetteId = bornetteId;
+    }
+
+    public AllEnums.Etat getEtatB() {
+        return etatB;
+    }
+
+    public void setEtatB(AllEnums.Etat etatB) {
+        this.etatB = etatB;
+    }
+
+    public Station getStationMere() {
+        return stationMere;
+    }
+
+    public void setStationMere(Station stationMere) {
+        this.stationMere = stationMere;
+    }
 }

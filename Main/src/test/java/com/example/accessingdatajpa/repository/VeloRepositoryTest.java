@@ -5,7 +5,10 @@ import com.example.accessingdatajpa.entity.Bornette;
 import com.example.accessingdatajpa.entity.Modele;
 import com.example.accessingdatajpa.entity.Station;
 import com.example.accessingdatajpa.entity.Velo;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,6 +16,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class VeloRepositoryTest {
 
     @Autowired
@@ -20,10 +24,12 @@ class VeloRepositoryTest {
 
 
     @Test
-    public void saveVelo(){
+    @Order(1)
+    public void saveVeloVTTSport(){
 
-        Bornette bornette = Bornette.builder()
-                .etatB(AllEnums.Etat.ETAT_OK)
+        Modele sportModele = Modele.builder()
+                .modeleName("Sport")
+                .prix(2.2f)
                 .build();
 
         Modele vttModele = Modele.builder()
@@ -31,77 +37,53 @@ class VeloRepositoryTest {
                 .prix(2.5f)
                 .build();
 
-        Velo veloVTT_2 = Velo.builder()
+        Velo veloVTT = Velo.builder()
                 .modeleDeVelo(vttModele)
                 .puceId(2)
-//                .bornette(bornette)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();
 
-        veloRepository.save(veloVTT_2);
+        Velo veloSport = Velo.builder()
+                .modeleDeVelo(sportModele)
+                .puceId(3)
+                .etatV(AllEnums.Etat.ETAT_OK)
+                .miseEnService(LocalDateTime.now())
+                .build();
+
+        veloRepository.save(veloVTT);
+        veloRepository.save(veloSport);
     }
 
     @Test
+    @Order(2)
     public void printAllVelo(){
         List<Velo> veloList=
                 veloRepository.findAll();
 
-        System.out.println("veloList = " + veloList);
+        for (Velo velo : veloList) {
+            System.out.println(velo);
+        }
     }
 
     @Test
+    @Order(3)
     public void printVeloById(){
         List<Velo> velos = veloRepository.findByVeloId(1L);
+        
 
         System.out.println(velos);
     }
 
     @Test
-    public void printVeloByModelName(){
-        List<Velo> velosVTT = veloRepository.findByModeleDeVeloModeleName("VTT");
-
-        System.out.println("VTT velos id's: ");
-        for (Velo velo: velosVTT) {
-            System.out.println(velo.getId());
-        }
-    }
-
-    @Test
-    public void printVeloPrixGreaterThan(){
-        float price = 2f;
-        List<Velo> velosGT2 = veloRepository.findByModeleDeVeloPrixGreaterThan(price);
-
-        System.out.println("Velos with price greater than "+ price + ": " + velosGT2);
-    }
-
-    @Test
-    public void printVeloByPuceId(){
-
-        Velo veloByPuce = veloRepository.getVeloByPuceId(1);
-
-        System.out.println(veloByPuce);
-    }
-
-    @Test
+    @Order(4)
     public void printVeloByEtat(){
         List<Velo> velosOK = veloRepository.findVelosByEtatV(AllEnums.Etat.ETAT_OK);
 
         System.out.println("Velos ids of working velos: ");
         for (Velo velo: velosOK) {
-            System.out.println(velo.getId());
+            System.out.println(velo.getVeloId());
         }
     }
 
-    @Test
-    public void printVeloModeleByVeloId(){
-        String veloModele = veloRepository.getVeloModeleVeloByVeloId(1L);
-        System.out.println(veloModele);
-
-    }
-
-    @Test
-    public void updateVeloEtatVByVeloIdTest(){
-        veloRepository.updateVeloEtatVByVeloId(AllEnums.Etat.ETAT_HS, 1l);
-    }
 }

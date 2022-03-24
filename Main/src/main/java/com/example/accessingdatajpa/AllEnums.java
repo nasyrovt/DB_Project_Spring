@@ -36,11 +36,11 @@ public class AllEnums {
         vNul
     }
 
-    public enum TempJournee{
-        MATIN,
-        JOURNEE,
-        SOIREE,
-        NUIT
-    }
+//    public enum TempJournee{
+//        MATIN,
+//        JOURNEE,
+//        SOIREE,
+//        NUIT
+//    }
 
 }

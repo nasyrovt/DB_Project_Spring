@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(
-        name="tbl_velo",
+        name="TBL_VELO",
         uniqueConstraints = @UniqueConstraint(
                 name="puce_unique",
                 columnNames = "numero_de_puce"
@@ -26,15 +26,7 @@ import java.time.LocalDateTime;
 public class Velo {
 
     @Id
-    @SequenceGenerator(
-            name="VELO_SEQ",
-            sequenceName = "VELO_SEQ",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy= GenerationType.SEQUENCE,
-            generator = "VELO_SEQ"
-    )
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long veloId;
 
     @Embedded
@@ -49,29 +41,54 @@ public class Velo {
     @Column(name="numero_de_puce", nullable = false)
     private int puceId;
 
-//    @OneToOne(
-//            cascade = CascadeType.ALL,
-//            fetch = FetchType.LAZY
-//    )
-//    @JoinColumn(
-//            name="bornette_id",
-//            referencedColumnName = "bornetteId",
-//            insertable=false,
-//            updatable=false
-//    )
-//    @ToString.Exclude
-//    private Bornette bornette;
-//
-//
-//    public void setBornette(Bornette bornette) {
-//        this.bornette = bornette;
-//    }
-//
-//    public Bornette getBornette() {
-//        return bornette;
-//    }
+    @Transient
+    public void setModeleDeVeloModeleName(String name){
+        this.modeleDeVelo.setModeleName(name);
+    }
 
-    public Long getId() {
-        return this.veloId;
+    public String getModeleDeVeloModeleName(){
+        return this.modeleDeVelo.getModeleName();
+    }
+
+    @Transient
+    public void setModeleDeVeloPrix(float prix){
+        this.modeleDeVelo.setPrix(prix);
+    }
+
+    public float getModeleDeVeloPrix(){
+        return this.modeleDeVelo.getPrix();
+    }
+
+
+    public LocalDateTime getMiseEnService() {
+        return miseEnService;
+    }
+
+    public void setMiseEnService(LocalDateTime miseEnService) {
+        this.miseEnService = miseEnService;
+    }
+
+    public AllEnums.Etat getEtatV() {
+        return etatV;
+    }
+
+    public void setEtatV(AllEnums.Etat etatV) {
+        this.etatV = etatV;
+    }
+
+    public Long getVeloId() {
+        return veloId;
+    }
+
+    public void setVeloId(Long veloId) {
+        this.veloId = veloId;
+    }
+
+    public int getPuceId() {
+        return puceId;
+    }
+
+    public void setPuceId(int puceId) {
+        this.puceId = puceId;
     }
 }

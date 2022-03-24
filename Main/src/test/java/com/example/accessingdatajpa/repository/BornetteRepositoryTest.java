@@ -41,7 +41,7 @@ class BornetteRepositoryTest {
 
         Bornette bornette = Bornette.builder()
                 .etatB(AllEnums.Etat.ETAT_OK)
-                .station(station)
+                .stationMere(station)
 //                .velo(velo)
                 .build();
 

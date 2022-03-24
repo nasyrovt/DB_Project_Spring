@@ -18,3 +18,5 @@ SpringBootProject/.idea
 SpringBootProject/*.iws
 SpringBootProject/*.iml
 SpringBootProject/*.ipr
+
+/Main/.idea/dataSources/974748a3-2ad3-4b3d-b0cd-dc7e9a4e98ce/storage_v2/_src_/schema/*.*

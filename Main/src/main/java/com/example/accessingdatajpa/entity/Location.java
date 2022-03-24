@@ -4,6 +4,7 @@ package com.example.accessingdatajpa.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -12,19 +13,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
+@Table(name="TBL_LOCATION")
 public class Location {
 
+
     @Id
-    @SequenceGenerator(
-            name="LOCATION_SEQ",
-            sequenceName = "LOCATION_SEQ",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator="LOCATION_SEQ"
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long locationId;
+
 
     @Column(name="start_date")
     private LocalDateTime startDate;
@@ -32,35 +29,52 @@ public class Location {
     @Column(name="end_date")
     private LocalDateTime endDate;
 
-    @OneToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-    )
-    @JoinColumn(
-            name="station_id",
-            referencedColumnName = "stationId"
-    )
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "station_depart")
     private Station stationDepart;
 
-    @OneToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-    )
-    @JoinColumn(
-            name = "station_idB",
-            referencedColumnName = "stationId"
-    )
-    private Station stationArriveId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "station_arrive")
+    private Station stationArrivee;
 
-    public Station getStationArriveId() {
-        return stationArriveId;
-    }
 
-    public Long getId() {
+    public Long getLocationId() {
         return locationId;
     }
 
-    public void setId(Long id) {
-        this.locationId = id;
+    public void setLocationId(Long locationId) {
+        this.locationId = locationId;
+    }
+
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
+
+    public Station getStationArrivee() {
+        return stationArrivee;
+    }
+
+    public void setStationArrivee(Station stationArrivee) {
+        this.stationArrivee = stationArrivee;
+    }
+
+    public Station getStationDepart() {
+        return stationDepart;
+    }
+
+    public void setStationDepart(Station stationDepart) {
+        this.stationDepart = stationDepart;
     }
 }

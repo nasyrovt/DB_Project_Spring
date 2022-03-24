@@ -1,40 +1,38 @@
 package com.example.accessingdatajpa.entity;
 
 import com.example.accessingdatajpa.AllEnums;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString
+@Table(name="TBL_STATION")
 public class Station {
 
     @Id
-    @SequenceGenerator(
-            name="STATION_SEQ",
-            sequenceName = "STATION_SEQ",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator="STATION_SEQ"
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long stationId;
 
+    @Column(name="adresse")
     private String adresse;
+
+    @Column(name="classification")
     private AllEnums.Classification classification;
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(
-//            name="station_id",
-//            referencedColumnName = "stationId"
-//    )
-//    private List<Bornette> bornette;
-//    private AllEnums.TempJournee status;
+//    @OneToMany(mappedBy = "stationDepart", fetch = FetchType.LAZY)
+//    private List<Location> locationsDepart;
+//
+//    @OneToMany(mappedBy = "stationArrivee")
+//    private List<Location> locationsArrivee;
+
+    @OneToMany(mappedBy = "stationMere", fetch = FetchType.EAGER)
+    private List<Bornette> bornettes;
+
 }
