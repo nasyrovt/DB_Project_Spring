@@ -1,13 +1,6 @@
-drop table TBL_VELO;
-drop table TBL_ABONNE;
-drop table TBL_CLIENT;
-drop table TBL_BORNETTE;
-drop table TBL_LOCATION;
-drop table TBL_STATION;
-
-create table TBL_VELO
+create table if not exists TBL_VELO
 (
-    VELO_ID                 NUMBER(3) not null
+    VELO_ID integer(3) not null
         constraint PKVELO
             primary key,
     NOM_DU_MODELE           VARCHAR2(20),
