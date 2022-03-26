@@ -32,6 +32,17 @@ public class Bornette {
     @JoinColumn(name = "station_mere")
     private Station stationMere;
 
+    @OneToOne
+    @JoinColumn(name = "current_velo")
+    private Velo currentVelo;
+
+    public Velo getCurrentVelo() {
+        return currentVelo;
+    }
+
+    public void setCurrentVelo(Velo currentVelo) {
+        this.currentVelo = currentVelo;
+    }
 
     public Long getBornetteId() {
         return bornetteId;

@@ -1,9 +1,6 @@
 package com.example.accessingdatajpa.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -19,11 +16,11 @@ import javax.persistence.*;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long clientId;
 
     @Column(name = "numero_CB")
-    private int numeroCarteBancaire;
+    private Long numeroCarteBancaire;
 
     @Column(name = "code_secret")
     private String codeSecret;
@@ -36,11 +33,11 @@ public class Client {
         this.clientId = id;
     }
 
-    public int getNumeroCarteBancaire() {
+    public Long getNumeroCarteBancaire() {
         return numeroCarteBancaire;
     }
 
-    public void setNumeroCarteBancaire(int numero){ this.numeroCarteBancaire = numero;}
+    public void setNumeroCarteBancaire(Long numero){ this.numeroCarteBancaire = numero;}
 
     public String getCodeSecret(){ return this.codeSecret;}
 

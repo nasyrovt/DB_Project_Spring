@@ -15,13 +15,14 @@ import java.util.Optional;
 public interface VeloRepository  extends JpaRepository<Velo, Long> {
 
     List<Velo> findByModeleDeVelo_ModeleNameIs(String modeleName);
+    List<Velo> findByModeleDeVelo_ModeleNameAndEtatV(String modeleDeVeloModeleName, AllEnums.Etat etatV);
 
 
     // Fetching Data
-    public List<Velo> findAll();
-    public List<Velo> findByVeloId(Long veloId);
+    List<Velo> findAll();
+    List<Velo> findByVeloId(Long veloId);
 
-    public List<Velo> findVelosByEtatV(AllEnums.Etat etatV);
+    List<Velo> findVelosByEtatV(AllEnums.Etat etatV);
 
 //    @Query("select v from Velo v where v.puceId =?1") //JPQL Query
 //    Velo getVeloByPuceId(int puceId);

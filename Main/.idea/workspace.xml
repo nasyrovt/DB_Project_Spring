@@ -4,50 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0db4c1dc-9be3-4940-9093-4d268553f72c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/PseudoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/RepositoryFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/AbonneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/AbonneRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/BornetteRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/ClientRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/LocationRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/StationRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/VeloRepositoryImpl.java" afterDir="false" />
+    <list default="true" id="0db4c1dc-9be3-4940-9093-4d268553f72c" name="Changes" comment="Main implementation in progress.&#10;Finally can use Repositories in main.">
+      <change afterPath="$PROJECT_DIR$/database-mysql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/974748a3-2ad3-4b3d-b0cd-dc7e9a4e98ce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/974748a3-2ad3-4b3d-b0cd-dc7e9a4e98ce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/AccessingDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/AccessingDataJpaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Abonne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Abonne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/PseudoMain.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Velo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Velo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/BornetteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/BornetteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/LocationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/StationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/VeloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/VeloRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/LocationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/LocationRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/StationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/StationRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/RepositoryFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/AbonneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/AbonneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/BornetteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/BornetteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/StationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/VeloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/VeloRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/AbonneRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/BaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/BornetteRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/ClientRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/LocationRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/StationRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/impl/VeloRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/AccessingDataJpaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/AccessingDataJpaApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Abonne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Abonne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/PseudoMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Client$ClientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Client$ClientBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Station.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Velo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Velo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/BornetteRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/LocationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/StationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/VeloRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/BornetteRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/BornetteRepositoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/LocationRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/LocationRepositoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/StationRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/StationRepositoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/VeloRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/VeloRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/AbonneRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/BornetteRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/ClientRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/LocationRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/StationRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/repository/impl/VeloRepositoryImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +54,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,7 +88,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="sqlserver&#10;oracle" />
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;oracle&#10;mysql" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="b948f3b5-cc5d-40d5-914f-1961d191371b" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -102,7 +98,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="Oracle" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="MySQL&#10;Oracle" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="Oracle" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -113,6 +109,9 @@
     <property name="settings.editor.selected.configurable" value="com.haulmont.jpb.reverseEngineering" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.accessingdatajpa" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -122,8 +121,13 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.accessingdatajpa.repository" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.example.accessingdatajpa.test" />
+      <recent name="com.example.accessingdatajpa" />
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccessingDataJpaApplication">
+  <component name="RunManager" selected="JUnit.StationRepositoryTest.saveStation">
     <configuration name="StationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="accessing-data-jpa-initial" />
       <extension name="coverage">
@@ -211,10 +215,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StationRepositoryTest.saveStation" />
         <item itemvalue="Spring Boot.AccessingDataJpaApplication" />
         <item itemvalue="JUnit.VeloRepositoryTest" />
         <item itemvalue="JUnit.StationRepositoryTest" />
-        <item itemvalue="JUnit.StationRepositoryTest.saveStation" />
         <item itemvalue="JUnit.StationRepositoryTest.testSaveStation" />
       </list>
     </recent_temporary>
@@ -242,7 +246,9 @@
       <workItem from="1647946106373" duration="3948000" />
       <workItem from="1647966686339" duration="1348000" />
       <workItem from="1648066642417" duration="17817000" />
-      <workItem from="1648115289773" duration="9468000" />
+      <workItem from="1648115289773" duration="9537000" />
+      <workItem from="1648139498750" duration="1611000" />
+      <workItem from="1648245646661" duration="16456000" />
     </task>
     <servers />
   </component>
@@ -263,6 +269,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Main implementation in progress.&#10;Finally can use Repositories in main." />
+    <option name="LAST_COMMIT_MESSAGE" value="Main implementation in progress.&#10;Finally can use Repositories in main." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
