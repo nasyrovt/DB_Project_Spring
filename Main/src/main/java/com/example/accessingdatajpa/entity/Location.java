@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@NoArgsConstructor
+@NoArgsConstructor //Decorateur de lombok
 @AllArgsConstructor
 @Builder
 @Table(name="tbl_location")
@@ -22,22 +22,6 @@ public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long locationId;
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public Velo getVelo() {
-        return velo;
-    }
-
-    public void setVelo(Velo velo) {
-        this.velo = velo;
-    }
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name="client_id")
@@ -100,6 +84,22 @@ public class Location {
 
     public void setStationDepart(Station stationDepart) {
         this.stationDepart = stationDepart;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Velo getVelo() {
+        return velo;
+    }
+
+    public void setVelo(Velo velo) {
+        this.velo = velo;
     }
 
     @Override

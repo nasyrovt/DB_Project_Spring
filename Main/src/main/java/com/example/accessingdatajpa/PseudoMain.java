@@ -78,7 +78,7 @@ class PseudoMain implements ApplicationRunner {
                 float prix;
                 Abonne currentClientAbonne = abonneRepository.getByAbonneId(currentClient.getClientId());
                 if(currentClientAbonne!=null){
-                    prix = 0.3f * locationATerminer.getVelo().getModeleDeVeloPrix()*Float.parseFloat(String.valueOf(minutes));
+                    prix = 0.7f * locationATerminer.getVelo().getModeleDeVeloPrix()*Float.parseFloat(String.valueOf(minutes));
                     if(locationATerminer.getStationArrivee().getClassification()== AllEnums.Classification.vPlus
                             &&locationATerminer.getStationDepart().getClassification()== AllEnums.Classification.vMoins){
                         currentClientAbonne.setPrime(Float.parseFloat(String.valueOf(minutes)));
@@ -204,14 +204,13 @@ class PseudoMain implements ApplicationRunner {
             clientRepository.save(newClient);
             List<Client> clients = clientRepository.findAll();
             currentClient = clients.get(clients.size() - 1);
-            System.out.println(currentClient.getClientId());
-
             locationClientOk();
         }
     }
 
     private void locationClientOk() {
         StringBuilder modeles = new StringBuilder();
+
 
         for(Bornette bornette: bornettesDispo){
             modeles.append("/").append(bornette.getCurrentVelo().getModeleDeVeloModeleName());
@@ -231,7 +230,7 @@ class PseudoMain implements ApplicationRunner {
 		System.out.println(locations);
 
         Location location = Location.builder()
-//                .locationId(locations.get(locations.size() - 1).getLocationId())
+                .locationId(locations.get(locations.size() - 1).getLocationId())
                 .client(currentClient)
                 .velo(bornettePourClient.getCurrentVelo())
                 .startDate(LocalDateTime.now())

@@ -23,7 +23,6 @@ public class Bornette {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bornetteId;
 
-
     @Column(name = "etat_bornette")
     private AllEnums.Etat etatB;
 

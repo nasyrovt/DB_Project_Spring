@@ -8,7 +8,10 @@ import com.example.accessingdatajpa.entity.Velo;
 import com.example.accessingdatajpa.repository.api.BornetteRepository;
 import com.example.accessingdatajpa.repository.api.StationRepository;
 import com.example.accessingdatajpa.repository.api.VeloRepository;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -16,6 +19,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class BornetteRepositoryTest {
 
     @Autowired
@@ -28,6 +32,7 @@ class BornetteRepositoryTest {
     StationRepository stationRepository;
 
     @Test
+    @Order(1)
     public void saveBornette(){
 
         Velo velo = veloRepository.getById(2L);
@@ -44,6 +49,7 @@ class BornetteRepositoryTest {
     }
 
     @Test
+    @Order(2)
     public void printAllBornettes(){
         List<Bornette> bornettes = bornetteRepository.findAll();
 

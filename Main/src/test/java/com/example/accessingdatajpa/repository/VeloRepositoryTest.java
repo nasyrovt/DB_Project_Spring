@@ -38,14 +38,14 @@ class VeloRepositoryTest {
 
         Velo veloVTT = Velo.builder()
                 .modeleDeVelo(vttModele)
-                .puceId(2)
+                .puceId(50)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();
 
         Velo veloSport = Velo.builder()
                 .modeleDeVelo(sportModele)
-                .puceId(3)
+                .puceId(45)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Persistence</ID>
+  <OriginalElement>JavaeeElement:/cb874b0/main/accessing-data-jpa-initial/jpa/JPA/PersistenceModel</OriginalElement>
+  <nodes>
+    <node x="256.2261904761905" y="128.0">Velo#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Velo.java</node>
+    <node x="-211.56276150627616" y="434.0">Location#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Location.java</node>
+    <node x="-206.06276150627616" y="188.9748953974895">AbstractPersistable#jar://C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.1/spring-data-jpa-2.6.1.jar!/org/springframework/data/jpa/domain/AbstractPersistable.class</node>
+    <node x="74.98129607491532" y="68.7280334728033">Modele#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Modele.java</node>
+    <node x="0.0" y="434.0">Client#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Client.java</node>
+    <node x="236.5" y="302.0">Bornette#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Bornette.java</node>
+    <node x="-16.5" y="163.36401673640165">Abonne#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Abonne.java</node>
+    <node x="210.0" y="434.0">Station#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Station.java</node>
+    <node x="-207.06276150627616" y="294.9748953974895">AbstractAuditable#jar://C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.1/spring-data-jpa-2.6.1.jar!/org/springframework/data/jpa/domain/AbstractAuditable.class</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Station#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Station.java" target="Bornette#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" relationship="RELATION">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="Bornette#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" target="Velo#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Velo.java" relationship="RELATION">
+      <point x="0.0" y="-39.0" />
+      <point x="301.0" y="276.0" />
+      <point x="356.7261904761905" y="276.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="Location#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Location.java" target="Client#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Client.java" relationship="RELATION">
+      <point x="0.0" y="-50.0" />
+      <point x="-125.06276150627616" y="560.0" />
+      <point x="95.0" y="560.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="AbstractAuditable#jar://C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.1/spring-data-jpa-2.6.1.jar!/org/springframework/data/jpa/domain/AbstractAuditable.class" target="AbstractPersistable#jar://C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.1/spring-data-jpa-2.6.1.jar!/org/springframework/data/jpa/domain/AbstractPersistable.class" relationship="INHERITANCE">
+      <point x="0.0" y="-39.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="Location#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Location.java" target="Velo#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Velo.java" relationship="RELATION">
+      <point x="0.0" y="-50.0" />
+      <point x="-125.06276150627616" y="560.0" />
+      <point x="402.5" y="560.0" />
+      <point x="402.5" y="276.0" />
+      <point x="356.7261904761905" y="276.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="Velo#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Velo.java" target="Modele#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Modele.java" relationship="EMBEDDING">
+      <point x="0.0" y="-61.0" />
+      <point x="356.7261904761905" y="103.0" />
+      <point x="148.98129607491532" y="103.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="Location#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Location.java" target="Station#file://E:/Courses/BD/DB_Project_Spring/Main/src/main/java/com/example/accessingdatajpa/entity/Station.java" relationship="RELATION">
+      <point x="0.0" y="-50.0" />
+      <point x="-125.06276150627616" y="560.0" />
+      <point x="301.0" y="560.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6407506702412867" showDependencies="false" x="316.16056917597405" y="343.68391299004554" />
+  <SelectedNodes>
+    <node>AbstractPersistable#jar://C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.1/spring-data-jpa-2.6.1.jar!/org/springframework/data/jpa/domain/AbstractPersistable.class</node>
+    <node>AbstractAuditable#jar://C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.1/spring-data-jpa-2.6.1.jar!/org/springframework/data/jpa/domain/AbstractAuditable.class</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Embeddables</Category>
+    <Category>Properties</Category>
+    <Category>Superclasses</Category>
+  </Categories>
+</Diagram>
+
