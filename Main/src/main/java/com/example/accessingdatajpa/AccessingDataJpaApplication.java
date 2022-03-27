@@ -11,9 +11,10 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 
@@ -41,6 +42,7 @@ class PseudoMain implements ApplicationRunner {
 	final LocationRepository locationRepository;
 	final StationRepository stationRepository;
 
+	List<Bornette> bornettesDispo = null;
 	Client currentClient = null;
 	Station currentStation = null;
 	final Scanner scanner = new Scanner(System.in);
@@ -56,7 +58,47 @@ class PseudoMain implements ApplicationRunner {
 	}
 
 	private void returnProcess() {
-		System.out.println("Return Process");
+		List<Bornette> bornettesLibre = bornetteRepository.findByStationMereAndCurrentVelo(currentStation, null);
+		if(bornettesLibre.size()==0){
+			System.out.println("Malheureusement, il n'y a pas de bornette libre pour votre velo.");
+		}
+		else{
+			System.out.print("Entrez votre code secret: ");
+			String userInput = scanner.nextLine();  // Read user input
+			while(userInput.length()!=4){
+				System.out.print("Code incorrecte.");
+				userInput = scanner.nextLine();  // Read user input
+			}
+			currentClient = clientRepository.findByCodeSecret(userInput);
+			if(currentClient==null){
+				System.out.println("On n'a pas reussi de trouver le client avec ce code.");
+			}
+			else{
+				List<Location> locationsDeClient = locationRepository.findByClient_CodeSecret(userInput);
+				System.out.println("Quel location(id) voulez-vous terminer: \n" + locationsDeClient);
+				userInput = scanner.nextLine();
+				Location locationATerminer = locationRepository.getByLocationId(Long.parseLong(userInput));
+				locationATerminer.setEndDate(LocalDateTime.now());
+				locationATerminer.setStationArrivee(currentStation);
+				locationRepository.save(locationATerminer);
+				long minutes = ChronoUnit.MINUTES.between(locationATerminer.getStartDate(), locationATerminer.getEndDate());
+				float prix;
+				Abonne currentClientAbonne = abonneRepository.getByAbonneId(currentClient.getClientId());
+				if(currentClientAbonne!=null){
+					prix = 0.3f * locationATerminer.getVelo().getModeleDeVeloPrix()*Float.parseFloat(String.valueOf(minutes));
+					if(locationATerminer.getStationArrivee().getClassification()== AllEnums.Classification.vPlus
+							&&locationATerminer.getStationDepart().getClassification()== AllEnums.Classification.vMoins){
+						currentClientAbonne.setPrime(Float.parseFloat(String.valueOf(minutes)));
+					}
+					System.out.println("Vous avez gagne" + currentClientAbonne.getPrime() + "minutes.");
+				}
+				else {
+					prix = locationATerminer.getVelo().getModeleDeVeloPrix() * Float.parseFloat(String.valueOf(minutes));
+				}
+
+				System.out.println("Location est terminer. Vous serez facture de" + prix + " euros");
+			}
+		}
 	}
 
 	private void locationProcess() {
@@ -84,6 +126,11 @@ class PseudoMain implements ApplicationRunner {
 			userInput = scanner.nextLine();  // Read user input
 		}
 		currentClient = clientRepository.findByCodeSecret(userInput);
+		if(currentClient==null){
+			System.out.println("On n'a pas reussi de trouver le client avec ce code. On va vous donner le nouveau.");
+			locationNonAbonne();
+			return;
+		}
 		Abonne currentAbonne = abonneRepository.findByAbonneId(currentClient.getClientId());
 		if(currentAbonne == null){
 			System.out.print("Vous n'etes pas abonne. Voulez-vous vous abonne? (O/N)");
@@ -101,31 +148,67 @@ class PseudoMain implements ApplicationRunner {
 					break;
 			}
 		}
+		else{
+			locationClientOk();
+		}
 	}
 
 	private void creerAbonne() {
+		System.out.println("Entrez votre nom: ");
+		String nomAbonne = scanner.nextLine();
+		System.out.println("Entrez votre prenom: ");
+		String prenomAbonne = scanner.nextLine();
+		System.out.println("Entrez votre dateDeN:(separe par /) ");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		String dateDeNAbonne = scanner.nextLine();
+		LocalDateTime dateTime = LocalDateTime.parse(dateDeNAbonne+" 00:00", formatter);
+		System.out.println("Entrez votre adresse: ");
+		String adresseAbonne = scanner.nextLine();
+		System.out.println("Entrez votre sex: (femme=1/homme=0) ");
+		String sexeAbonne = scanner.nextLine();
+
+		Abonne newAbonne = Abonne.builder()
+				.abonneId(currentClient.getClientId())
+				.adresse(adresseAbonne)
+				.dateDebutAbonne(LocalDateTime.now())
+				.dateFinAbonne(LocalDateTime.now().plusYears(1L))
+				.nom(nomAbonne)
+				.prenom(prenomAbonne)
+				.sexe(Integer.parseInt(sexeAbonne))
+				.dateDeN(dateTime)
+				.build();
+
+		abonneRepository.save(newAbonne);
+		locationClientOk();
 	}
 
 	private void locationNonAbonne() {
-		System.out.println("Input your bank card credentials (16 digits card number): ");
-		Long clientCB = Long.parseLong(scanner.nextLine());
-		String clientSecretCode = getAlphaNumericString();
-		System.out.println("Your secret code is " + clientSecretCode + ". Remember it!");
+		if(currentClient!=null){
+			locationClientOk();
+		}
+		else {
+			System.out.println("Input your bank card credentials (16 digits card number): ");
+			Long clientCB = Long.parseLong(scanner.nextLine());
+			String clientSecretCode = getAlphaNumericString();
+			System.out.println("Your secret code is " + clientSecretCode + ". Remember it!");
 
-		Client newClient = Client.builder()
-				.numeroCarteBancaire(clientCB)
-				.codeSecret(clientSecretCode)
-				.build();
+			Client newClient = Client.builder()
+					.numeroCarteBancaire(clientCB)
+					.codeSecret(clientSecretCode)
+					.build();
 
-		clientRepository.save(newClient);
+			clientRepository.save(newClient);
+			List<Client> clients = clientRepository.findAll();
+			currentClient = clients.get(clients.size() - 1);
+			System.out.println(currentClient.getClientId());
 
+			locationClientOk();
+		}
+	}
 
-		List<Bornette> bornettesDispo = bornetteRepository.findByStationMereAndCurrentVelo_EtatV(currentStation, AllEnums.Etat.ETAT_OK);
+	private void locationClientOk() {
 		StringBuilder modeles = new StringBuilder();
 
-		if(bornettesDispo.size()==0){
-			System.out.println("Il n'y a pas de velo disponible sur cette station");
-		}
 		for(Bornette bornette: bornettesDispo){
 			modeles.append("/").append(bornette.getCurrentVelo().getModeleDeVeloModeleName());
 		}
@@ -133,17 +216,27 @@ class PseudoMain implements ApplicationRunner {
 		String modeleChoisi = scanner.nextLine();
 		List<Velo> veloDisponibles = new ArrayList<>(Collections.emptyList());
 		for (Bornette b : bornettesDispo) {
-			veloDisponibles.add(b.getCurrentVelo());
+			if(b.getCurrentVelo().getEtatV()== AllEnums.Etat.ETAT_OK)
+				veloDisponibles.add(b.getCurrentVelo());
 		}
 		Bornette bornettePourClient = bornetteRepository.findFirstByStationMereAndCurrentVelo_ModeleDeVelo_ModeleName(currentStation,modeleChoisi);
-		System.out.println("Vous pouvez prendre le velo a la bornette" + bornettePourClient.getBornetteId());
+		System.out.println("Vous pouvez prendre le velo a la bornette numero " + bornettePourClient.getBornetteId() + ".");
 		System.out.println("....Client recupere le velo....");
-		bornettePourClient.setCurrentVelo(null);
+
+//		List<Location> locations = locationRepository.findAll();
+//		System.out.println(locations);
+
 		Location location = Location.builder()
+				.locationId(200L)
+				.client(currentClient)
+				.velo(bornettePourClient.getCurrentVelo())
 				.startDate(LocalDateTime.now())
 				.stationDepart(currentStation)
 				.build();
+
 		locationRepository.save(location);
+		bornettePourClient.setCurrentVelo(null);
+		bornetteRepository.save(bornettePourClient);
 		System.out.println("Location " + location +" vient d'etre cree.");
 	}
 
@@ -189,11 +282,14 @@ class PseudoMain implements ApplicationRunner {
 
 		boolean end = false;
 		while(!end){
-			//Toutes les stations disponibles
-			List<Station> stations = stationRepository.findAll();
 
-			//Station aleatoire
-			currentStation = stations.get(new Random().nextInt(stations.size()));
+			currentStation = stationRepository.getById(14L);
+			System.out.println("Bonjour, vous etes a la station numero " + currentStation.getStationId() +".");
+			bornettesDispo = bornetteRepository.findByStationMereAndCurrentVelo_EtatV(currentStation, AllEnums.Etat.ETAT_OK);
+			if(bornettesDispo.size()==0){
+				System.out.println("Malheureusement, il n'y a plus de velo disponible sur cette station.");
+				break;
+			}
 
 			System.out.println("1) Location.");
 			System.out.println("2) Return a bicycle.");

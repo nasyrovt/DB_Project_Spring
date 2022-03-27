@@ -14,7 +14,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Table(name="tbl_bornette")
-@ToString
 @NamedQueries(
         @NamedQuery(name = "get-all-bornettes", query = "select b from Bornette b")
 )
@@ -23,6 +22,7 @@ public class Bornette {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bornetteId;
+
 
     @Column(name = "etat_bornette")
     private AllEnums.Etat etatB;
@@ -66,5 +66,13 @@ public class Bornette {
 
     public void setStationMere(Station stationMere) {
         this.stationMere = stationMere;
+    }
+
+    @Override
+    public String toString() {
+        return "Bornette{" +
+                "bornetteId=" + bornetteId +
+                ", etatB=" + etatB +
+                '}';
     }
 }

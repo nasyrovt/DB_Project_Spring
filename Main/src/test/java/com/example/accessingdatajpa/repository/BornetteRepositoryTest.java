@@ -6,6 +6,8 @@ import com.example.accessingdatajpa.entity.Modele;
 import com.example.accessingdatajpa.entity.Station;
 import com.example.accessingdatajpa.entity.Velo;
 import com.example.accessingdatajpa.repository.api.BornetteRepository;
+import com.example.accessingdatajpa.repository.api.StationRepository;
+import com.example.accessingdatajpa.repository.api.VeloRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,31 +21,23 @@ class BornetteRepositoryTest {
     @Autowired
     BornetteRepository bornetteRepository;
 
+    @Autowired
+    VeloRepository veloRepository;
+
+    @Autowired
+    StationRepository stationRepository;
 
     @Test
     public void saveBornette(){
 
-        Modele modeleSport = Modele.builder()
-                .modeleName("Sport")
-                .prix(2.2f)
-                .build();
+        Velo velo = veloRepository.getById(2L);
 
-        Velo velo = Velo.builder()
-                .modeleDeVelo(modeleSport)
-                .etatV(AllEnums.Etat.ETAT_OK)
-                .miseEnService(LocalDateTime.now())
-                .puceId(3)
-                .build();
-
-        Station station = Station.builder()
-                .adresse("1, cours Jean Jaures, 38000 Grenoble")
-                .classification(AllEnums.Classification.vNul)
-                .build();
+        Station station = stationRepository.getById(1L);
 
         Bornette bornette = Bornette.builder()
-                .etatB(AllEnums.Etat.ETAT_OK)
+                .etatB(AllEnums.Etat.ETAT_HS)
                 .stationMere(station)
-//                .velo(velo)
+                .currentVelo(velo)
                 .build();
 
         bornetteRepository.save(bornette);

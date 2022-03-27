@@ -8,11 +8,9 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@ToString
 @Table(name="TBL_STATION")
 @NamedQueries(
         @NamedQuery(name = "get-all-stations", query = "select s from Station s")
@@ -29,13 +27,47 @@ public class Station {
     @Column(name="classification")
     private AllEnums.Classification classification;
 
-//    @OneToMany(mappedBy = "stationDepart", fetch = FetchType.LAZY)
-//    private List<Location> locationsDepart;
-//
-//    @OneToMany(mappedBy = "stationArrivee")
-//    private List<Location> locationsArrivee;
 
     @OneToMany(mappedBy = "stationMere", fetch = FetchType.EAGER)
     private List<Bornette> bornettes;
 
+    public Long getStationId() {
+        return stationId;
+    }
+
+    public void setStationId(Long stationId) {
+        this.stationId = stationId;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public AllEnums.Classification getClassification() {
+        return classification;
+    }
+
+    public void setClassification(AllEnums.Classification classification) {
+        this.classification = classification;
+    }
+
+    public List<Bornette> getBornettes() {
+        return bornettes;
+    }
+
+    public void setBornettes(List<Bornette> bornettes) {
+        this.bornettes = bornettes;
+    }
+
+    @Override
+    public String toString() {
+        return "Station{" +
+                "stationId=" + stationId +
+                ", classification=" + classification +
+                '}';
+    }
 }

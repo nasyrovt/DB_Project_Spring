@@ -13,18 +13,39 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@Table(name="TBL_LOCATION")
+@Table(name="tbl_location")
 @NamedQueries(
         @NamedQuery(name = "get-all-locations", query = "select l from Location l")
 )
 public class Location {
 
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long locationId;
 
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Velo getVelo() {
+        return velo;
+    }
+
+    public void setVelo(Velo velo) {
+        this.velo = velo;
+    }
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name="client_id")
+    private Client client;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name="velo_id")
+    private Velo velo;
 
     @Column(name="start_date")
     private LocalDateTime startDate;
@@ -79,5 +100,13 @@ public class Location {
 
     public void setStationDepart(Station stationDepart) {
         this.stationDepart = stationDepart;
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "locationId=" + locationId +
+                ", velo=" + velo +
+                '}';
     }
 }
