@@ -10,4 +10,5 @@ import java.util.List;
 public interface LocationRepository extends JpaRepository<Location, Long> {
     List<Location> findByClient_CodeSecret(String client_codeSecret);
     Location getByLocationId(Long locationId);
+    List<Location> findAllByLocationIdAfter(Long locationId);
 }

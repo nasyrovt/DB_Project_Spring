@@ -16,4 +16,5 @@ public interface BornetteRepository extends JpaRepository<Bornette, Long> {
     List<Bornette> findByStationMereAndCurrentVelo_EtatV(Station stationMere, AllEnums.Etat currentVelo_etatV);
     Bornette findFirstByStationMereAndCurrentVelo_ModeleDeVelo_ModeleName(Station stationMere, String currentVelo_modeleDeVeloModeleName);
     List<Bornette> findByStationMereAndCurrentVelo(Station stationMere, Velo currentVelo);
+    Bornette findFirstByStationMereAndCurrentVelo(Station stationMere, Velo currentVelo);
 }

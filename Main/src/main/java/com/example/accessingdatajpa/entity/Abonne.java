@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -18,7 +17,10 @@ import java.time.LocalDateTime;
 public class Abonne{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "client_sequence"
+    )
     private Long abonneId;
 
     @Column(name="nom")
@@ -27,7 +29,7 @@ public class Abonne{
     @Column(name="prenom")
     private String prenom;
 
-    @Column(name="dateDeN")
+    @Column(name="date_den")
     private LocalDateTime dateDeN;
 
     @Column(name="sexe")
