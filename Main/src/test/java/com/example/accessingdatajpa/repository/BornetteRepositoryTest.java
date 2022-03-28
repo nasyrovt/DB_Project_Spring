@@ -59,17 +59,17 @@ class BornetteRepositoryTest {
     }
 
     @Test
-    @Order(1)
+    @Order(3)
     public void reloadBornettes(){
         Velo velo;
         Station station = stationRepository.getById(1L);
         Bornette bornette;
-        for(long i=1;i<7;i++){
+        for(long i=13;i<35;i++){
             velo = veloRepository.getById(i);
 
             bornette = Bornette.builder()
                     .bornetteId(i)
-                    .etatB(AllEnums.Etat.ETAT_HS)
+                    .etatB(AllEnums.Etat.ETAT_OK)
                     .stationMere(station)
                     .currentVelo(velo)
                     .build();

@@ -14,6 +14,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -34,53 +35,25 @@ class StationRepositoryTest {
     @Test
     @Order(1)
     public void saveStation(){
-
-        Velo velo = veloRepository.getById(1L);
-        Velo velo2 = veloRepository.getById(2L);
-        Velo velo3 = veloRepository.getById(3L);
-        Velo velo4 = veloRepository.getById(4L);
-
-        Bornette bornette = Bornette.builder()
-                .currentVelo(velo)
-                .etatB(AllEnums.Etat.ETAT_OK)
-                .build();
-        Bornette bornette4 = Bornette.builder()
-                .etatB(AllEnums.Etat.ETAT_OK)
-                .build();
-        Bornette bornette5 = Bornette.builder()
-                .etatB(AllEnums.Etat.ETAT_OK)
-                .build();
-        Bornette bornette6 = Bornette.builder()
-                .etatB(AllEnums.Etat.ETAT_OK)
-                .build();
-
-        Bornette bornette2 = Bornette.builder()
-                .currentVelo(velo2)
-                .etatB(AllEnums.Etat.ETAT_OK)
-                .build();
-
-        Bornette bornette3 = Bornette.builder()
-                .currentVelo(velo4)
-                .etatB(AllEnums.Etat.ETAT_OK)
-                .build();
-
-        List<Bornette> borenttes = Arrays.asList(bornette, bornette2, bornette3,bornette4, bornette5,bornette6);
-
-        Station station = Station.builder()
-                .bornettes(borenttes)
-                .adresse("28 avenue Felix Vialet, 38000 Grenoble")
-                .classification(AllEnums.Classification.vNul)
-                .build();
-
-        bornette2.setStationMere(station);
-        bornette3.setStationMere(station);
-        bornette.setStationMere(station);
-        bornette4.setStationMere(station);
-        bornette5.setStationMere(station);
-        bornette6.setStationMere(station);
-
-        bornetteRepository.saveAll(borenttes);
-
+        Velo velo;
+        Bornette bornette;
+        Station station;
+        boolean isSet = false;
+        List<Bornette> bornettes = new ArrayList<>();
+        for(long i =21;i<24;i++){
+            velo = veloRepository.getById(i);
+            bornette = Bornette.builder()
+                    .bornetteId(i)
+                    .currentVelo(null)
+                    .etatB(AllEnums.Etat.ETAT_OK)
+                    .build();
+            bornettes.add(bornette);
+        }
+        station = stationRepository.getById(10L);
+        for(Bornette born : bornettes){
+            born.setStationMere(station);
+        }
+        bornetteRepository.saveAll(bornettes);
 
         stationRepository.save(station);
     }
