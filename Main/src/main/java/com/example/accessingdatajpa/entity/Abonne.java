@@ -17,10 +17,6 @@ import java.time.LocalDateTime;
 public class Abonne{
 
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "client_sequence"
-    )
     private Long abonneId;
 
     @Column(name="nom")

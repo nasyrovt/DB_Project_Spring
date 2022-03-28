@@ -32,20 +32,20 @@ class VeloRepositoryTest {
                 .build();
 
         Modele vttModele = Modele.builder()
-                .modeleName("VTT")
+                .modeleName("Tourist")
                 .prix(2.5f)
                 .build();
 
         Velo veloVTT = Velo.builder()
                 .modeleDeVelo(vttModele)
-                .puceId(50)
+                .puceId(5)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();
 
         Velo veloSport = Velo.builder()
                 .modeleDeVelo(sportModele)
-                .puceId(45)
+                .puceId(6)
                 .etatV(AllEnums.Etat.ETAT_OK)
                 .miseEnService(LocalDateTime.now())
                 .build();

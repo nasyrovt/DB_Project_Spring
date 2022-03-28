@@ -1,5 +1,6 @@
 package com.example.accessingdatajpa.repository.api;
 
+import com.example.accessingdatajpa.entity.Client;
 import com.example.accessingdatajpa.entity.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -11,4 +12,5 @@ public interface LocationRepository extends JpaRepository<Location, Long> {
     List<Location> findByClient_CodeSecret(String client_codeSecret);
     Location getByLocationId(Long locationId);
     List<Location> findAllByLocationIdAfter(Long locationId);
+    List<Location> findAllByClientAndStationArriveeNull(Client client);
 }

@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8fc8c35-5945-48ce-992f-b8b13f0dcd14" name="Changes" comment="Final code avant le rendu">
-      <change afterPath="$PROJECT_DIR$/../SI/Diagrame de Persistance des Entites.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6e4ded60-216a-4712-b268-3f094855b47d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6e4ded60-216a-4712-b268-3f094855b47d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/AccessingDataJpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/AccessingDataJpaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/PseudoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/PseudoMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Bornette.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Abonne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Abonne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/entity/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/repository/api/LocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/BornetteRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/LocationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/LocationRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/accessingdatajpa/repository/VeloRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/PseudoMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/PseudoMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Abonne$AbonneBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Abonne$AbonneBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Abonne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Abonne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Bornette.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/accessingdatajpa/entity/Location.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/BornetteRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/BornetteRepositoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/VeloRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/accessingdatajpa/repository/VeloRepositoryTest.class" afterDir="false" />
@@ -69,11 +71,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AccessingDataJpaApplication">
-    <configuration name="BornetteRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accessing-data-jpa-initial" />
+  <component name="RunManager" selected="Spring Boot.AccessingDataJpaApplication (1)">
+    <configuration name="BornetteRepositoryTest.reloadBornettes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
@@ -82,13 +84,45 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
       <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.BornetteRepositoryTest" />
+      <option name="METHOD_NAME" value="reloadBornettes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.LocationRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accessing-data-jpa-initial" />
+    <configuration name="LocationRepositoryTest.saveLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.LocationRepositoryTest" />
+      <option name="METHOD_NAME" value="saveLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StationRepositoryTest.saveStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
@@ -97,28 +131,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
       <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.StationRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="saveStation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VeloRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="accessing-data-jpa-initial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.accessingdatajpa.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.accessingdatajpa.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.example.accessingdatajpa.repository.VeloRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccessingDataJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="accessing-data-jpa-initial" />
+    <configuration name="AccessingDataJpaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.accessingdatajpa.*" />
@@ -132,10 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AccessingDataJpaApplication" />
-        <item itemvalue="JUnit.VeloRepositoryTest" />
-        <item itemvalue="JUnit.StationRepositoryTest" />
-        <item itemvalue="JUnit.BornetteRepositoryTest" />
+        <item itemvalue="Spring Boot.AccessingDataJpaApplication (1)" />
+        <item itemvalue="JUnit.BornetteRepositoryTest.reloadBornettes" />
+        <item itemvalue="JUnit.LocationRepositoryTest.saveLocation" />
+        <item itemvalue="JUnit.LocationRepositoryTest" />
+        <item itemvalue="JUnit.StationRepositoryTest.saveStation" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +184,8 @@
       <updated>1648417217562</updated>
       <workItem from="1648417227767" duration="346000" />
       <workItem from="1648418452218" duration="1397000" />
+      <workItem from="1648429602527" duration="1405000" />
+      <workItem from="1648431074897" duration="3984000" />
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -186,16 +209,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Final code avant le rendu" />
     <option name="LAST_COMMIT_MESSAGE" value="Final code avant le rendu" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/accessingdatajpa/AccessingDataJpaApplication.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

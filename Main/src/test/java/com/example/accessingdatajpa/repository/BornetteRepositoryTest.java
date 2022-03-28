@@ -57,4 +57,25 @@ class BornetteRepositoryTest {
             System.out.println(bornette);
         }
     }
+
+    @Test
+    @Order(1)
+    public void reloadBornettes(){
+        Velo velo;
+        Station station = stationRepository.getById(1L);
+        Bornette bornette;
+        for(long i=1;i<7;i++){
+            velo = veloRepository.getById(i);
+
+            bornette = Bornette.builder()
+                    .bornetteId(i)
+                    .etatB(AllEnums.Etat.ETAT_HS)
+                    .stationMere(station)
+                    .currentVelo(velo)
+                    .build();
+
+            bornetteRepository.save(bornette);
+        }
+
+    }
 }

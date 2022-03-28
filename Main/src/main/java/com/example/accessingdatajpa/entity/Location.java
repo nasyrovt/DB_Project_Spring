@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 public class Location {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long locationId;
 
     @ManyToOne(cascade = CascadeType.MERGE)
@@ -37,7 +37,7 @@ public class Location {
     @Column(name="end_date")
     private LocalDateTime endDate;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "station_depart")
     private Station stationDepart;
 
